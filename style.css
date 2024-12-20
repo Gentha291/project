@@ -1,8 +1,4 @@
 /* Global Styles */
-* {
-    box-sizing: border-box;
-  }  
-
 body {
     font-family: 'Arial', sans-serif;
     background-color: rgb(42, 40, 40);
@@ -29,12 +25,6 @@ body {
     backdrop-filter: blur(10px);
 }
 
-.navbar-toggler {
-    margin-right: auto;
-    max-width: 100%;
-  }
-  
-
 .navbar-brand {
     font-weight: 700;
     font-size: 1.5rem;
@@ -59,11 +49,6 @@ body {
 
 .nav-link:hover::after {
     width: 100%;
-}
-
-.hero-section {
-    padding: 0 15px;
-    overflow: hidden;
 }
 
 .btn-light {
@@ -270,17 +255,6 @@ footer:hover {
 .card:hover {
     transform: translateY(-5px);
 }
-
-.cards-wrapper {
-    overflow-x: hidden;
-    flex-wrap: nowrap;
-  }
-  
-  .facility-card {
-    max-width: 100%;
-    flex: 0 0 auto;
-  }
-  
 
 .bi {
     margin-right: 0.5rem;
