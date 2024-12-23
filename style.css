@@ -1,4 +1,8 @@
-/* Global Styles */
+  /*  Global Styles */
+html {
+    overflow-x: hidden;
+}
+
 body {
     font-family: 'Arial', sans-serif;
     background-color: rgb(42, 40, 40);
@@ -62,26 +66,6 @@ body {
     transform: scale(1.05);
 }
 
-.opeen {
-    display: none;
-    transition: all 0.5s ease;
-    border-radius: 20px;
-    margin-top: 10px;
-}
-
-.opeen.open {
-    display: block;
-    opacity: 1;
-    height: 250px;
-    width: 250px;
-}
-
-.opeen.close {
-    opacity: 0;
-    height: 0;
-    width: 0;
-}
-
 .about-section {
     background-color: #f8f9fa;
     padding: 60px 0;
@@ -119,6 +103,28 @@ body {
 
 .about-section .bi {
     font-size: 1.2rem;
+}
+
+/* fasilitas hover card */
+.mobile-text {
+    display: none;
+}
+.laptop-text {
+    display: none;
+}
+
+/* Untuk layar dengan lebar maksimum 768px (mobile) */
+@media (max-width: 768px) {
+    .mobile-text {
+        display: block;
+    }
+}
+
+/* Untuk layar dengan lebar di atas 768px (laptop/desktop) */
+@media (min-width: 769px) {
+    .laptop-text {
+        display: block;
+    }
 }
 
 /* slide galery*/
@@ -263,7 +269,7 @@ footer:hover {
 .maps-container {
     position: relative;
     overflow: hidden;
-    padding-top: 100%; /* Membuat container persegi */
+    padding-top: 100%; 
     height: 100%;
     min-height: 450px;
 }
@@ -295,7 +301,7 @@ footer:hover {
 
 @media (max-width: 992px) {
     .maps-container {
-        padding-top: 75%; /* Lebih pendek pada layar mobile */
+        padding-top: 75%; 
         min-height: 300px;
     }
 }
@@ -378,40 +384,12 @@ footer:hover {
     opacity: 1;
 }
 
-/* Fasilitas Section */
-.fasilitas-section {
-    background-color: rgba(0, 0, 0, 0.8);
-    padding: 5rem 0;
-}
-
-.card {
-    transition: all 0.3s ease;
-    border: none;
-    border-radius: 10px;
-    overflow: hidden;
-    margin-bottom: 1rem;
-}
-
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
-
-.card-img-top {
-    height: 200px;
-    object-fit: cover;
-}
-
-.card-body {
-    padding: 1.5rem;
-}
-
-.card-title {
-    font-weight: bold;
-    margin-bottom: 1rem;
-}
 
 /* Gallery Section styling */
+.position {
+    position: end;
+}
+
 .gallery-section {
     background: rgba(0, 0, 0, 0.5);
     padding: 2rem;
@@ -526,12 +504,13 @@ footer:hover {
     width: 100%;
     max-width: 1000px;
     margin: 0 auto;
-    padding: 0 50px;
-    overflow: hidden;
+    padding: 0 20px;
+    overflow-x: auto;
+    white-space: nowrap;
 }
 
 .cards-wrapper {
-    display: flex;
+    display: inline-flex;
     gap: 20px;
     transition: transform 0.5s ease;
 }
@@ -584,11 +563,11 @@ footer:hover {
 }
 
 .card {
-    transition: transform 0.3s ease; /* Transisi halus untuk transformasi */
+    transition: transform 0.3s ease; 
 }
 
 .card.enlarged {
-    transform: scale(1.1); /* Ukuran saat diperbesar */
+    transform: scale(1.1); 
 }
 
 .maps-container {
@@ -661,3 +640,132 @@ h2 {
     padding-right: 15px; 
 }
 
+/* Fasilitas card */ 
+.card-fs {
+    --background: linear-gradient(to left, #f7ba2b 0%, #ea5358 100%);
+    width: 250px;
+    height: 350px;
+    padding: 5px;
+    border-radius: 1rem;
+    overflow: visible;
+    background: #f7ba2b;
+    background: var(--background);
+    position: relative;
+    z-index: 1;
+   }
+   
+   .card-fs::after {
+    position: absolute;
+    content: "";
+    top: 30px;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    transform: scale(0.8);
+    filter: blur(25px);
+    background: #f7ba2b;
+    background: var(--background);
+    transition: opacity .5s;
+   }
+   
+   .card-info-fs {
+    --color: #181818;
+    background: var(--color);
+    color: var(--color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+    border-radius: .7rem;
+   }
+   
+   .card-fs .title {
+    font-weight: bold;
+    letter-spacing: .1em;
+   }
+   
+   /*Hover*/
+   .card-fs:hover::after {
+    opacity: 0;
+   }
+   
+   .card-fs:hover .card-info-fs {
+    color: #f7ba2b;
+    transition: color 1s;
+   }
+   
+   /* Responsive */
+
+.cardss-container {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 50px;
+    overflow: hidden;
+}
+
+.cardss-wrapper {
+    display: flex;
+    gap: 20px;
+    transition: transform 0.5s ease;
+}
+
+.facility-card {
+    flex: 0 0 300px;
+    min-width: 300px;
+}
+
+.cards-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.prev-card {
+    left: 0;
+}
+
+.next-card {
+    right: 0;
+}
+
+.facility-card.enlarged {
+    transform: scale(1.2);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .cards-container {
+        padding: 0 40px;
+    }
+    
+    .facility-card {
+        flex: 0 0 280px;
+        min-width: 280px;
+    }
+}
+
+.card {
+    transition: transform 0.3s ease; 
+}
+
+.card.enlarged {
+    transform: scale(1.1); 
+}
