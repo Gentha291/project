@@ -69,12 +69,12 @@ highlights.forEach(highlight => {
   });
 });
 
-// Initialize Facilities Swiper
+// Initialize Swiper
 const facilitiesSwiper = new Swiper(".facilitiesSwiper", {
   slidesPerView: 1,
   spaceBetween: 30,
   loop: true,
-  speed: 1000,
+  centeredSlides: true,
   autoplay: {
     delay: 3000,
     disableOnInteraction: false,
@@ -84,13 +84,25 @@ const facilitiesSwiper = new Swiper(".facilitiesSwiper", {
     clickable: true,
   },
   navigation: {
-    nextEl: ".nav-next",
-    prevEl: ".nav-prev",
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  effect: "creative",
+  creativeEffect: {
+    prev: {
+      translate: ["-120%", 0, -500],
+      rotate: [0, 0, -15],
+      opacity: 0
+    },
+    next: {
+      translate: ["120%", 0, -500],
+      rotate: [0, 0, 15],
+      opacity: 0
+    }
   },
   breakpoints: {
     640: {
       slidesPerView: 1,
-      spaceBetween: 20,
     },
     768: {
       slidesPerView: 2,
@@ -101,6 +113,14 @@ const facilitiesSwiper = new Swiper(".facilitiesSwiper", {
       spaceBetween: 30,
     },
   },
+});
+
+// Initialize AOS
+AOS.init({
+  duration: 800,
+  easing: 'ease-in-out',
+  once: true,
+  mirror: false
 });
 
 // Pastikan tombol navigasi selalu aktif

@@ -266,17 +266,46 @@
       <div class="container">
         <div class="section-header text-center" data-aos="fade-up">
           <span class="section-subtitle">Fasilitas</span>
-          <h2 class="section-title">Layanan & Fasilitas</h2>
+          <h2 class="section-title">Fasilitas & Layanan</h2>
           <p class="section-description">
-            Berbagai fasilitas modern untuk kenyamanan pengunjung
+            Nikmati berbagai fasilitas modern untuk kenyamanan pengunjung
           </p>
         </div>
-        
-        <div class="facilities-carousel">
+
+        <div class="facilities-slider" data-aos="fade-up">
           <div class="swiper facilitiesSwiper">
             <div class="swiper-wrapper">
               <!-- Facility Card 1 -->
-              <div class="swiper-slide" data-aos="fade-up">
+              <div class="swiper-slide">
+                <div class="facility-card">
+                  <div class="facility-image">
+                    <img src="image/taman-hijau.webp" alt="Taman">
+                    <div class="facility-overlay">
+                      <div class="overlay-content">
+                        <i class="bi bi-tree"></i>
+                        <h3>Taman Hijau</h3>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="facility-content">
+                    <div class="facility-header">
+                      <div class="facility-icon">
+                        <i class="bi bi-tree-fill"></i>
+                      </div>
+                      <h4>Taman Hijau</h4>
+                    </div>
+                    <p>Area hijau yang asri untuk bersantai dan menikmati suasana alam</p>
+                    <ul class="facility-features">
+                      <li><i class="bi bi-check-circle"></i> Area Piknik</li>
+                      <li><i class="bi bi-check-circle"></i> Jogging Track</li>
+                      <li><i class="bi bi-check-circle"></i> Taman Bermain</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Facility Card 2 -->
+              <div class="swiper-slide">
                 <div class="facility-card">
                   <div class="facility-image">
                     <img src="image/taman hijau.webp" alt="Area Parkir">
@@ -299,8 +328,8 @@
                 </div>
               </div>
 
-              <!-- Facility Card 2 -->
-              <div class="swiper-slide" data-aos="fade-up" data-aos-delay="100">
+              <!-- Facility Card 3 -->
+              <div class="swiper-slide">
                 <div class="facility-card">
                   <div class="facility-image">
                     <img src="image/taman hijau.webp" alt="Food Court">
@@ -322,43 +351,14 @@
                   </div>
                 </div>
               </div>
-
-              <!-- Facility Card 3 -->
-              <div class="swiper-slide" data-aos="fade-up" data-aos-delay="200">
-                <div class="facility-card">
-                  <div class="facility-image">
-                    <img src="image/taman hijau.webp" alt="Taman">
-                    <div class="facility-overlay">
-                      <i class="bi bi-tree"></i>
-                    </div>
-                  </div>
-                  <div class="facility-content">
-                    <h3>Taman</h3>
-                    <p>Ruang terbuka hijau untuk bersantai</p>
-                    <ul class="facility-features">
-                      <li><i class="bi bi-check2-circle"></i> Taman yang asri</li>
-                      <li><i class="bi bi-check2-circle"></i> Area bermain anak</li>
-                      <li><i class="bi bi-check2-circle"></i> Tempat bersantai</li>
-                    </ul>
-                    <a href="#" class="facility-btn">
-                      Selengkapnya <i class="bi bi-arrow-right"></i>
-                    </a>
-                  </div>
-                </div>
-              </div>
             </div>
             
+            <!-- Navigation -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            
+            <!-- Pagination -->
             <div class="swiper-pagination"></div>
-          </div>
-          
-          <!-- Custom Navigation -->
-          <div class="facilities-navigation">
-            <button class="nav-prev">
-              <i class="bi bi-arrow-left"></i>
-            </button>
-            <button class="nav-next">
-              <i class="bi bi-arrow-right"></i>
-            </button>
           </div>
         </div>
       </div>
